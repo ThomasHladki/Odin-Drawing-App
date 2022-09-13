@@ -1,4 +1,18 @@
 let gridDimensions = 4;
+let mouseDown = 0;  
+window.onmousedown = () => {  
+    mouseDown=1;  
+    if (mouseDown) {  
+        console.log('mouse button down')  
+    }  
+}  
+window.onmouseup = () => {  
+    mouseDown=0;  
+    if (mouseDown) {  
+        console.log('mouse button down')  
+    }  
+}
+
 function createGrid(size){
     const container=document.querySelector(".Grid-Container");
     for(let i =0;i<size;i++){
@@ -18,9 +32,15 @@ function createRow(size){
 function createGridElement(){
     const gridElement = document.createElement('div');
     gridElement.style.cssText="flex: 1; background-color: black; border: 0.5px solid blue;";
-    gridElement.addEventListener('click', ()=>{
+    gridElement.addEventListener('mousedown', ()=>{
         gridElement.style.backgroundColor="white";      //Change this to a variable later for colour options/eraser
     });
+    gridElement.addEventListener("mouseenter",()=>{
+        if(mouseDown){
+            gridElement.style.backgroundColor="white";  
+        }
+    });
+    
    
     return gridElement;
 }
