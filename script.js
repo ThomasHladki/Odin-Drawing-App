@@ -1,16 +1,13 @@
-let gridDimensions = 4;
+const DEFAULT_COLOUR="black";
+const DEFAULT_DIMENSIONS=4;
+let currentColour=DEFAULT_COLOUR;
+let gridDimensions = DEFAULT_DIMENSIONS;
 let mouseDown = 0;  
 window.onmousedown = () => {  
-    mouseDown=1;  
-    if (mouseDown) {  
-        console.log('mouse button down')  
-    }  
+    mouseDown=true;   
 }  
 window.onmouseup = () => {  
-    mouseDown=0;  
-    if (mouseDown) {  
-        console.log('mouse button down')  
-    }  
+    mouseDown=false;  
 }
 
 function createGrid(size){
@@ -37,15 +34,11 @@ function createGridElement(){
     });
     gridElement.addEventListener("mouseenter",()=>{
         if(mouseDown){
-            gridElement.style.backgroundColor="white";  
+            gridElement.style.backgroundColor="black";  
         }
     });
     gridElement.setAttribute("class", "Grid-Element");
     return gridElement;
-}
-
-function createInitialGrid(){
-    createGrid(4);
 }
 
 function deleteCurrentGrid(){
@@ -60,8 +53,7 @@ function resetGrid(){
     createGrid(gridDimensions);
 }
 
-
-createInitialGrid();
+createGrid(gridDimensions);
 const slider = document.querySelector(".Resize-Grid-Slider");
 slider.addEventListener("input", ()=>{
     gridDimensions = slider.value;
