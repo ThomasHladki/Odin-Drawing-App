@@ -31,17 +31,16 @@ function createRow(size){
 
 function createGridElement(){
     const gridElement = document.createElement('div');
-    gridElement.style.cssText="flex: 1; background-color: black; border: 0.5px solid blue;";
+    gridElement.style.cssText="flex: 1; background-color: white; border: 0.5px solid black;";
     gridElement.addEventListener('mousedown', ()=>{
-        gridElement.style.backgroundColor="white";      //Change this to a variable later for colour options/eraser
+        gridElement.style.backgroundColor="black";      //Change this to a variable later for colour options/eraser
     });
     gridElement.addEventListener("mouseenter",()=>{
         if(mouseDown){
             gridElement.style.backgroundColor="white";  
         }
     });
-    
-   
+    gridElement.setAttribute("class", "Grid-Element");
     return gridElement;
 }
 

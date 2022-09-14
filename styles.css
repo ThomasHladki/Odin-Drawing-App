@@ -9,6 +9,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(193, 190, 186);
 }
 
 .Options-Container{
@@ -22,6 +23,10 @@ body{
     
     flex-direction: column;
     border: 2px solid black;
-    height: 730px;
-    width: 730px;
+    height: 675px;
+    width: 675px;
+}
+
+.Grid-Element:hover{
+    background-color: crimson;
 }
