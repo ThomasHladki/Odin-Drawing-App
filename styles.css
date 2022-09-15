@@ -26,7 +26,20 @@ body{
     height: 675px;
     width: 675px;
 }
-
+.Grid-Element{
+    background-color: white;
+}
 .Grid-Element:hover{
-    background-color: crimson;
+    background-color: rgb(119, 113, 114);
+}
+
+.Resize-Grid-Slider{
+    opacity: 0.9;
+}
+.Resize-Grid-Slider:hover{
+    opacity: 1;
+}
+
+.Active-Mode-Btn{
+    
 }

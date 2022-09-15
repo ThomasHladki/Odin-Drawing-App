@@ -1,7 +1,9 @@
 const DEFAULT_COLOUR="black";
 const DEFAULT_DIMENSIONS=4;
+let currentMode="drawingMode";
 let currentColour=DEFAULT_COLOUR;
 let gridDimensions = DEFAULT_DIMENSIONS;
+
 let mouseDown = 0;  
 window.onmousedown = () => {  
     mouseDown=true;   
@@ -28,7 +30,7 @@ function createRow(size){
 
 function createGridElement(){
     const gridElement = document.createElement('div');
-    gridElement.style.cssText="flex: 1; background-color: white; border: 0.5px solid black;";
+    gridElement.style.cssText="flex: 1; border: 0.5px solid black;";
     gridElement.addEventListener('mousedown', ()=>{
         gridElement.style.backgroundColor="black";      //Change this to a variable later for colour options/eraser
     });
@@ -61,3 +63,11 @@ slider.addEventListener("input", ()=>{
 });
 const clearGridBtn =document.querySelector(".Clear-Grid-Btn");
 clearGridBtn.addEventListener("click", resetGrid);
+const eraserModeBtn=document.querySelector(".Eraser-Mode-Btn");
+eraserModeBtn.addEventListener("click", ()=>{
+    if(currentMode=="drawingMode"){
+        currentMode="eraserMode";
+    eraserModeBtn.setAttribute("class", "Active-Mode-Btn");
+    }
+    
+});
