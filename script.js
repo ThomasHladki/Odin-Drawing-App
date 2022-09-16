@@ -3,8 +3,7 @@ const DEFAULT_DIMENSIONS=4;
 let currentMode="drawingMode";
 let currentColour=DEFAULT_COLOUR;
 let gridDimensions = DEFAULT_DIMENSIONS;
-
-let mouseDown = 0;  
+let mouseDown = false;  
 window.onmousedown = () => {  
     mouseDown=true;   
 }  
@@ -31,15 +30,29 @@ function createRow(size){
 function createGridElement(){
     const gridElement = document.createElement('div');
     gridElement.style.cssText="flex: 1; border: 0.5px solid black;";
-    gridElement.addEventListener('mousedown', ()=>{
-        gridElement.style.backgroundColor="black";      //Change this to a variable later for colour options/eraser
+    gridElement.addEventListener('mousedown', ()=>{ 
+        if(currentMode=="drawingMode"){
+            gridElement.classList.remove("Grid-Element-Base-State");
+            gridElement.style.backgroundColor="black";      //Change this to a variable later for colour options/eraser
+        }else{
+            gridElement.style.removeProperty("background-color");
+            gridElement.classList.add("Grid-Element-Base-State");
+        }
+        
     });
     gridElement.addEventListener("mouseenter",()=>{
         if(mouseDown){
-            gridElement.style.backgroundColor="black";  
+            if(currentMode=="drawingMode"){
+                gridElement.classList.remove("Grid-Element-Base-State");
+                gridElement.style.backgroundColor="black";      //Change this to a variable later for colour options/eraser
+            }else{
+                gridElement.style.removeProperty("background-color");
+                gridElement.classList.add("Grid-Element-Base-State");
+            }
         }
     });
     gridElement.setAttribute("class", "Grid-Element");
+    gridElement.classList.add("Grid-Element-Base-State");
     return gridElement;
 }
 
@@ -55,6 +68,15 @@ function resetGrid(){
     createGrid(gridDimensions);
 }
 
+function updateToggleInfo(status){
+    const toggleContainer = document.querySelector(".Toggle-Container");
+    toggleContainer.removeChild(document.querySelector(".Toggle-Status"));
+    const newStatus =document.createElement("span");
+    newStatus.textContent=status;
+    newStatus.setAttribute("class","Toggle-Status");
+    toggleContainer.appendChild(newStatus);
+}
+
 createGrid(gridDimensions);
 const slider = document.querySelector(".Resize-Grid-Slider");
 slider.addEventListener("input", ()=>{
@@ -67,7 +89,12 @@ const eraserModeBtn=document.querySelector(".Eraser-Mode-Btn");
 eraserModeBtn.addEventListener("click", ()=>{
     if(currentMode=="drawingMode"){
         currentMode="eraserMode";
-    eraserModeBtn.setAttribute("class", "Active-Mode-Btn");
+        eraserModeBtn.setAttribute("class", "Active-Mode-Btn");
+        updateToggleInfo("ON");
+    }else{
+        currentMode="drawingMode";
+        eraserModeBtn.classList.remove("Active-Mode-Btn");
+        updateToggleInfo("OFF");
     }
     
 });

@@ -11,7 +11,6 @@ body{
     align-items: center;
     background-color: rgb(193, 190, 186);
 }
-
 .Options-Container{
     display: flex;   
 }
@@ -26,10 +25,10 @@ body{
     height: 675px;
     width: 675px;
 }
-.Grid-Element{
+.Grid-Element-Base-State{
     background-color: white;
 }
-.Grid-Element:hover{
+.Grid-Element-Base-State:hover{
     background-color: rgb(119, 113, 114);
 }
 
@@ -39,7 +38,10 @@ body{
 .Resize-Grid-Slider:hover{
     opacity: 1;
 }
-
-.Active-Mode-Btn{
+.Eraser-Mode-Btn{
     
+    border-radius: 20px;
+}
+.Active-Mode-Btn{
+    background-color: rgba(255, 2, 2, 0.514);
 }
