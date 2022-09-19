@@ -76,12 +76,19 @@ function updateToggleInfo(status){
     newStatus.setAttribute("class","Toggle-Status");
     toggleContainer.appendChild(newStatus);
 }
-
+function updateDimensionsInfo(newDimensionValue){
+    const dimensionsInfo=document.querySelector(".Current-Dimensions");
+    dimensionsInfo.removeChild(dimensionsInfo.firstChild);
+    const newDimensionsSpan = document.createElement("span");
+    newDimensionsSpan.textContent=newDimensionValue+" by "+newDimensionValue;
+    dimensionsInfo.appendChild(newDimensionsSpan);
+}
 createGrid(gridDimensions);
 const slider = document.querySelector(".Resize-Grid-Slider");
 slider.addEventListener("input", ()=>{
     gridDimensions = slider.value;
     resetGrid();
+    updateDimensionsInfo(slider.value);
 });
 const clearGridBtn =document.querySelector(".Clear-Grid-Btn");
 clearGridBtn.addEventListener("click", resetGrid);
@@ -89,7 +96,7 @@ const eraserModeBtn=document.querySelector(".Eraser-Mode-Btn");
 eraserModeBtn.addEventListener("click", ()=>{
     if(currentMode=="drawingMode"){
         currentMode="eraserMode";
-        eraserModeBtn.setAttribute("class", "Active-Mode-Btn");
+        eraserModeBtn.classList.add("Active-Mode-Btn");
         updateToggleInfo("ON");
     }else{
         currentMode="drawingMode";
