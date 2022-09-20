@@ -13,24 +13,102 @@ body{
 }
 .Options-Container{
     display: flex;  
-    width: 75%; 
-}
-.Options-Container div{
-    flex: 1;
+    width: 45vmax; 
     
+}
+.Change-Colour-Container, .Eraser-Mode-Btn-Container, .Clear-Grid-Btn-Container, .Save-Container, .Resize-Grid-Container{
+    flex: 1;
+    height: calc(45vmax/5);
     border: 1px solid black;
     justify-content: center;
     align-items: center;
 }
-.Grid-Container{
-    margin: 1%;
+.Change-Colour-Container{
+    padding: 2px;
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
-    height: 67vmin;
-    width: 67vmin;
-    /*height: 675px;
-    width: 675px;*/
+    gap: 2px 2px;
+}
+.Colour-Row-One, .Colour-Row-Two, .Colour-Row-Three, .Colour-Row-Four{
+    flex: 1 1 auto;
+    display: flex;
+    width: 100%;
+    gap: 2px 2px;
+}
+.Colour-Row-One div, .Colour-Row-Two div, .Colour-Row-Three div, .Colour-Row-Four div{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    
+}
+.Select-Red{
+    background-color: red;
+}
+.Select-Blue{
+    background-color: blue;
+}
+.Select-Green{
+    background-color: green;
+}
+.Select-Yellow{
+    background-color: yellow;
+}
+.Select-Purple{
+    background-color: purple;
+}
+.Select-Orange{
+    background-color: rgb(255, 112, 60);
+}
+.Select-Black{
+    background-color: black;
+}
+.Select-Pink{
+    background-color: rgb(244, 134, 200);
+}
+.Select-Brown{
+    background-color: rgb(62, 9, 9);
+}
+.Select-Teal{
+    background-color: teal;
+}
+.Select-Light-Grey{
+    background-color: rgb(143, 140, 140);
+}
+.Select-Peach{
+    background-color: peachpuff;
+}
+.Select-Dark-Grey{
+    background-color: rgb(82, 80, 80);
+}
+.Select-Burgundy{
+    background-color: rgb(160, 36, 36);
+}
+.Select-Lime{
+    background-color: lime;
+}
+.Colour-Selector{
+    background: linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 1) 0%,
+        rgba(255, 154, 0, 1) 10%,
+        rgba(208, 222, 33, 1) 20%,
+        rgba(79, 220, 74, 1) 30%,
+        rgba(63, 218, 216, 1) 40%,
+        rgba(47, 201, 226, 1) 50%,
+        rgba(28, 127, 238, 1) 60%,
+        rgba(95, 21, 242, 1) 70%,
+        rgba(186, 12, 248, 1) 80%,
+        rgba(251, 7, 217, 1) 90%,
+        rgba(255, 0, 0, 1) 100%
+    );
+}
+.Grid-Container{
+    display: flex;
+    flex-direction: column;
+    border: 5px solid black;
+    height: 65vmin;
+    width: 65vmin;
 }
 .Grid-Element-Base-State{
     background-color: white;
@@ -52,15 +130,17 @@ body{
     opacity: 0.9;
     height: 30%;
     width: 85%;
+    padding: 2%;
+    font-size: 90%;
 }
 
 .Options-Btn:hover{
-   opacity: 1; 
+   opacity: 1.2; 
 }
-.Eraser-Mode-Btn{
-    
+.Eraser-Mode-Btn{   
     
 }
 .Active-Mode-Btn{
     background-color: rgba(255, 2, 2, 0.514);
 }
+
