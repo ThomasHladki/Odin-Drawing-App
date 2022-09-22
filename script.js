@@ -33,7 +33,7 @@ function createGridElement(){
     gridElement.addEventListener('mousedown', ()=>{ 
         if(currentMode=="drawingMode"){
             gridElement.classList.remove("Grid-Element-Base-State");
-            gridElement.style.backgroundColor="black";      //Change this to a variable later for colour options/eraser
+            gridElement.style.backgroundColor=currentColour;      //Change this to a variable later for colour options/eraser
         }else{
             gridElement.style.removeProperty("background-color");
             gridElement.classList.add("Grid-Element-Base-State");
@@ -44,7 +44,7 @@ function createGridElement(){
         if(mouseDown){
             if(currentMode=="drawingMode"){
                 gridElement.classList.remove("Grid-Element-Base-State");
-                gridElement.style.backgroundColor="black";      //Change this to a variable later for colour options/eraser
+                gridElement.style.backgroundColor=currentColour;      //Change this to a variable later for colour options/eraser
             }else{
                 gridElement.style.removeProperty("background-color");
                 gridElement.classList.add("Grid-Element-Base-State");
@@ -103,5 +103,49 @@ eraserModeBtn.addEventListener("click", ()=>{
         eraserModeBtn.classList.remove("Active-Mode-Btn");
         updateToggleInfo("OFF");
     }
-    
+});
+document.querySelector(".Select-Red").addEventListener("click",()=>{
+    currentColour="red";
+});
+document.querySelector(".Select-Blue").addEventListener("click",()=>{
+    currentColour="blue";
+});
+document.querySelector(".Select-Yellow").addEventListener("click",()=>{
+    currentColour="yellow";
+});
+document.querySelector(".Select-Green").addEventListener("click",()=>{
+    currentColour="green";
+});
+document.querySelector(".Select-Purple").addEventListener("click",()=>{
+    currentColour="purple";
+});
+document.querySelector(".Select-Orange").addEventListener("click",()=>{
+    currentColour="rgb(255, 112, 60)";
+});
+document.querySelector(".Select-Black").addEventListener("click",()=>{
+    currentColour="black";
+});
+document.querySelector(".Select-Pink").addEventListener("click",()=>{
+    currentColour="pink";
+});
+document.querySelector(".Select-Brown").addEventListener("click",()=>{
+    currentColour="rgb(64, 10, 10)";
+});
+document.querySelector(".Select-Teal").addEventListener("click",()=>{
+    currentColour="teal";
+});
+document.querySelector(".Select-Light-Grey").addEventListener("click",()=>{
+    currentColour="rgb(143, 140, 140)";
+});
+document.querySelector(".Select-Peach").addEventListener("click",()=>{
+    currentColour="peachpuff";
+});
+document.querySelector(".Select-Dark-Grey").addEventListener("click",()=>{
+    currentColour="rgb(82, 80, 80)";
+});
+document.querySelector(".Select-Burgundy").addEventListener("click",()=>{
+    currentColour="rgb(160, 36, 36)";
+});
+document.querySelector(".Select-Lime").addEventListener("click",()=>{
+    currentColour="lime";
 });

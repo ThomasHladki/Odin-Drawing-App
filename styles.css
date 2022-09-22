@@ -18,29 +18,30 @@ body{
 }
 .Change-Colour-Container, .Eraser-Mode-Btn-Container, .Clear-Grid-Btn-Container, .Save-Container, .Resize-Grid-Container{
     flex: 1;
+    display: flex;
     height: calc(45vmax/5);
     border: 1px solid black;
     justify-content: center;
     align-items: center;
 }
 .Change-Colour-Container{
-    padding: 2px;
     display: flex;
     flex-direction: column;
-    gap: 2px 2px;
+    gap: 5%;
+    
 }
 .Colour-Row-One, .Colour-Row-Two, .Colour-Row-Three, .Colour-Row-Four{
     flex: 1 1 auto;
     display: flex;
     width: 100%;
-    gap: 2px 2px;
+    gap: 5%;
 }
 .Colour-Row-One div, .Colour-Row-Two div, .Colour-Row-Three div, .Colour-Row-Four div{
     flex: 1;
     width: 100%;
-    height: 100%;
-    border: 1px solid black;
-    
+    height: 90%;
+    border: 2px solid black;
+    border-radius: 50%;
 }
 .Select-Red{
     background-color: red;
@@ -67,7 +68,7 @@ body{
     background-color: rgb(244, 134, 200);
 }
 .Select-Brown{
-    background-color: rgb(62, 9, 9);
+    background-color: rgb(64, 10, 10);
 }
 .Select-Teal{
     background-color: teal;
@@ -86,6 +87,51 @@ body{
 }
 .Select-Lime{
     background-color: lime;
+}
+.Select-Red:hover{
+    border: 2px solid white;
+}
+.Select-Blue:hover{
+    border: 2px solid white;
+}
+.Select-Green:hover{
+    border: 2px solid white;
+}
+.Select-Yellow:hover{
+    border: 2px solid white;
+}
+.Select-Purple:hover{
+    border: 2px solid white;
+}
+.Select-Orange:hover{
+    border: 2px solid white;
+}
+.Select-Black:hover{
+    border: 2px solid white;
+}
+.Select-Pink:hover{
+    border: 2px solid white;
+}
+.Select-Brown:hover{
+    border: 2px solid white;
+}
+.Select-Teal:hover{
+    border: 2px solid white;
+}
+.Select-Light-Grey:hover{
+    border: 2px solid white;
+}
+.Select-Peach:hover{
+    border: 2px solid white;
+}
+.Select-Dark-Grey:hover{
+    border: 2px solid white;
+}
+.Select-Burgundy:hover{
+    border: 2px solid white;
+}
+.Select-Lime:hover{
+    border: 2px solid white;
 }
 .Colour-Selector{
     background: linear-gradient(
@@ -143,4 +189,3 @@ body{
 .Active-Mode-Btn{
     background-color: rgba(255, 2, 2, 0.514);
 }
-
