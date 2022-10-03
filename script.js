@@ -29,7 +29,7 @@ function createRow(size){
 
 function createGridElement(){
     const gridElement = document.createElement('div');
-    gridElement.style.cssText="flex: 1; border: 0.5px solid black;";
+    gridElement.style.cssText="flex: 1;";
     gridElement.addEventListener('mousedown', ()=>{ 
         if(currentMode=="drawingMode"){
             gridElement.classList.remove("Grid-Element-Base-State");

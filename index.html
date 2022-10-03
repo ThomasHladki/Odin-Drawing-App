@@ -10,7 +10,9 @@
 </head>
 <body>
   <div class="Main-Container">
-    <header class="header"></header>
+    <header class="header">
+      <p class = "Title">Grid-Sketch</p>
+    </header>
     <div class = "Grid-Container">
       
     </div>
@@ -39,7 +41,10 @@
           <div class = "Select-Dark-Grey"></div>
           <div class = "Select-Burgundy"></div>
           <div class = "Select-Lime"></div>
-          <div class = "Colour-Selector"></div>
+          <div class = "Colour-Selector">
+            <input type="color" class = "Colour-Picker"/> 
+          </div>
+          
         </div> 
       </div>
       <div class= "Eraser-Mode-Btn-Container">
@@ -48,12 +53,10 @@
       <div class = "Clear-Grid-Btn-Container">
         <button class="Clear-Grid-Btn Options-Btn">Clear Grid</button>
       </div>
-      <div class="Save-Container">
-        <button class ="Save-Btn Options-Btn">Save and Export</button>
-      </div>
       <div class="Resize-Grid-Container">
-        <input type="range" min ="2" max ="64" value="4" class="Resize-Grid-Slider">
+        <input type="range" min ="2" max ="100" value="4" class="Resize-Grid-Slider">
         <p class = "Current-Dimensions"><span class="Current-Dimensions-Value">4 by 4</span></p>
+        
       </div>
     </div>
     

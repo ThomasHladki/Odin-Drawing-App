@@ -11,15 +11,20 @@ body{
     align-items: center;
     background-color: rgb(193, 190, 186);
 }
+.Header{
+    border: 2px solid black;
+    height: 100%;
+    display: flex;
+}
 .Options-Container{
     display: flex;  
-    width: 45vmax; 
+    width: 36vmax; 
     
 }
-.Change-Colour-Container, .Eraser-Mode-Btn-Container, .Clear-Grid-Btn-Container, .Save-Container, .Resize-Grid-Container{
+.Change-Colour-Container, .Eraser-Mode-Btn-Container, .Clear-Grid-Btn-Container, .Resize-Grid-Container{
     flex: 1;
     display: flex;
-    height: calc(45vmax/5);
+    height: calc(36vmax/4);
     border: 1px solid black;
     justify-content: center;
     align-items: center;
@@ -35,13 +40,14 @@ body{
     display: flex;
     width: 100%;
     gap: 5%;
+    /*box-sizing: border-box;*/
 }
 .Colour-Row-One div, .Colour-Row-Two div, .Colour-Row-Three div, .Colour-Row-Four div{
     flex: 1;
     width: 100%;
     height: 90%;
     border: 2px solid black;
-    border-radius: 50%;
+    border-radius: 50%;   
 }
 .Select-Red{
     background-color: red;
@@ -148,13 +154,31 @@ body{
         rgba(251, 7, 217, 1) 90%,
         rgba(255, 0, 0, 1) 100%
     );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
 }
+/*.Colour-Picker{
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+    opacity: 0;
+    padding: 0px;
+}*/
+
+.Colour-Picker {
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0;
+  }
 .Grid-Container{
     display: flex;
     flex-direction: column;
     border: 5px solid black;
     height: 65vmin;
     width: 65vmin;
+    margin: 1%;
 }
 .Grid-Element-Base-State{
     background-color: white;
@@ -165,11 +189,18 @@ body{
 .Options-Container{
     height: 15%;
 }
+.Resize-Grid-Container{
+    flex-direction: column;
+}
 .Resize-Grid-Slider{
     opacity: 0.9;
+    flex: 1 1 auto;
 }
 .Resize-Grid-Slider:hover{
     opacity: 1;
+}
+.Current-Dimensions{
+    flex: 1 1 auto;
 }
 .Options-Btn{
     border-radius: 20px;
