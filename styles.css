@@ -36,7 +36,7 @@ body{
     
 }
 .Colour-Row-One, .Colour-Row-Two, .Colour-Row-Three, .Colour-Row-Four{
-    flex: 1 1 auto;
+    height: 25%;
     display: flex;
     width: 100%;
     gap: 5%;
@@ -159,14 +159,15 @@ body{
     align-items: center;
     overflow: auto;
 }
-/*.Colour-Picker{
-    width: fit-content;
-    height: fit-content;
-    border-radius: 50%;
-    opacity: 0;
-    padding: 0px;
-}*/
-
+.Colour-Selector:hover{
+    border: 2px solid white;
+}
+.Colour-Row-Four{
+    height: 21%;
+}
+.Colour-Selector, .Select-Lime, .Select-Dark-Grey, .Select-Burgundy{
+    height: 80%;
+}
 .Colour-Picker {
     border-radius: 50%;
     background: #fff;

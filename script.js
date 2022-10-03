@@ -149,3 +149,8 @@ document.querySelector(".Select-Burgundy").addEventListener("click",()=>{
 document.querySelector(".Select-Lime").addEventListener("click",()=>{
     currentColour="lime";
 });
+const colorPicker = document.querySelector(".Colour-Picker");
+colorPicker.addEventListener("input", ()=>{
+    currentColour=colorPicker.value;
+    colorPicker.style.backgroundColor=colorPicker.value;
+});
