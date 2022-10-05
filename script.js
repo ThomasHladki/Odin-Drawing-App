@@ -80,7 +80,7 @@ function updateDimensionsInfo(newDimensionValue){
     const dimensionsInfo=document.querySelector(".Current-Dimensions");
     dimensionsInfo.removeChild(dimensionsInfo.firstChild);
     const newDimensionsSpan = document.createElement("span");
-    newDimensionsSpan.textContent=newDimensionValue+" by "+newDimensionValue;
+    newDimensionsSpan.textContent=newDimensionValue+" x "+newDimensionValue;
     dimensionsInfo.appendChild(newDimensionsSpan);
 }
 createGrid(gridDimensions);

@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Nova Flat' rel='stylesheet'>
+
     <script src = "script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
   <div class="Main-Container">
-    <header class="header">
+    <header class="Header">
       <p class = "Title">Grid-Sketch</p>
     </header>
     <div class = "Grid-Container">
@@ -18,30 +21,29 @@
     </div>
     <div class="Options-Container">
       <div class ="Change-Colour-Container">
-        <!--<button class="Change-Colour-Btn Options-Btn">Change Colour</button> -->
         <div class = "Colour-Row-One">
-          <div class = "Select-Red"></div>
-          <div class = "Select-Blue"></div>
-          <div class = "Select-Yellow"></div>
-          <div class = "Select-Green"></div>
+          <div class = "Select-Red Select-Colour"></div>
+          <div class = "Select-Blue Select-Colour"></div>
+          <div class = "Select-Yellow Select-Colour"></div>
+          <div class = "Select-Green Select-Colour"></div>
         </div>
         <div class = "Colour-Row-Two">
-          <div class = "Select-Purple"></div>
-          <div class = "Select-Orange"></div>
-          <div class = "Select-Black"></div>
-          <div class = "Select-Pink"></div>
+          <div class = "Select-Purple Select-Colour"></div>
+          <div class = "Select-Orange Select-Colour"></div>
+          <div class = "Select-Black Select-Colour"></div>
+          <div class = "Select-Pink Select-Colour"></div>
         </div>
         <div class = "Colour-Row-Three">
-          <div class = "Select-Brown"></div>
-          <div class = "Select-Teal"></div>
-          <div class = "Select-Light-Grey"></div>
-          <div class = "Select-Peach"></div>
+          <div class = "Select-Brown Select-Colour"></div>
+          <div class = "Select-Teal Select-Colour"></div>
+          <div class = "Select-Light-Grey Select-Colour"></div>
+          <div class = "Select-Peach Select-Colour"></div>
         </div>
         <div class = "Colour-Row-Four">
-          <div class = "Select-Dark-Grey"></div>
-          <div class = "Select-Burgundy"></div>
-          <div class = "Select-Lime"></div>
-          <div class = "Colour-Selector">
+          <div class = "Select-Dark-Grey Select-Colour"></div>
+          <div class = "Select-Burgundy Select-Colour"></div>
+          <div class = "Select-Lime Select-Colour"></div>
+          <div class = "Colour-Selector Select-Colour">
             <input type="color" id="Colour-Picker" class = "Colour-Picker">
           </div>
           
@@ -54,8 +56,10 @@
         <button class="Clear-Grid-Btn Options-Btn">Clear Grid</button>
       </div>
       <div class="Resize-Grid-Container">
-        <input type="range" min ="2" max ="100" value="4" class="Resize-Grid-Slider">
-        <p class = "Current-Dimensions"><span class="Current-Dimensions-Value">4 by 4</span></p>
+        <div class="Slider-Container">
+          <input type="range" min ="2" max ="100" value="4" class="Resize-Grid-Slider">
+        </div>
+        <p class = "Current-Dimensions"><span class="Current-Dimensions-Value">4 x 4</span></p>
         
       </div>
     </div>

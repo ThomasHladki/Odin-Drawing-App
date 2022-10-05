@@ -2,50 +2,73 @@ body{
     width: 100%;
     margin: 0%;
 }
+
+*{
+    font-family: Gruppo;
+}
+
 .Main-Container{
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100vmin;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(193, 190, 186);
+    background-color: #1B262C;
 }
+
 .Header{
-    border: 2px solid black;
+
+    height: fit-content;
+    max-height: 9%;
+    display: table;
+    width: 90%;
+    flex: 1 1 auto;
+    
+}
+.Title{
+    display: table-row;
+    color: #BBE1FA;
+    font-size: 48px;
     height: 100%;
-    display: flex;
+    max-height: 100%;
+    border: 2px solid black;
+    padding: 0%;
+    text-align: center;
+    font-weight: bolder;
+   
 }
 .Options-Container{
-    display: flex;  
-    width: 36vmax; 
-    
+    display: flex;
+    gap: 10px;  
+    height: 15%;
 }
 .Change-Colour-Container, .Eraser-Mode-Btn-Container, .Clear-Grid-Btn-Container, .Resize-Grid-Container{
     flex: 1;
     display: flex;
-    height: calc(36vmax/4);
-    border: 1px solid black;
+    height: calc(37vmax/4);
     justify-content: center;
     align-items: center;
+    width: calc(37vmax/4);
 }
 .Change-Colour-Container{
-    display: flex;
     flex-direction: column;
     gap: 5%;
-    
+    border: 5px solid #BBE1FA;
+    border-radius: 12%;
 }
 .Colour-Row-One, .Colour-Row-Two, .Colour-Row-Three, .Colour-Row-Four{
     height: 25%;
     display: flex;
     width: 100%;
     gap: 5%;
-    /*box-sizing: border-box;*/
+    box-sizing: border-box;  
 }
+
 .Colour-Row-One div, .Colour-Row-Two div, .Colour-Row-Three div, .Colour-Row-Four div{
     flex: 1;
     width: 100%;
-    height: 90%;
     border: 2px solid black;
     border-radius: 50%;   
 }
@@ -94,51 +117,10 @@ body{
 .Select-Lime{
     background-color: lime;
 }
-.Select-Red:hover{
+.Select-Colour:hover{
     border: 2px solid white;
 }
-.Select-Blue:hover{
-    border: 2px solid white;
-}
-.Select-Green:hover{
-    border: 2px solid white;
-}
-.Select-Yellow:hover{
-    border: 2px solid white;
-}
-.Select-Purple:hover{
-    border: 2px solid white;
-}
-.Select-Orange:hover{
-    border: 2px solid white;
-}
-.Select-Black:hover{
-    border: 2px solid white;
-}
-.Select-Pink:hover{
-    border: 2px solid white;
-}
-.Select-Brown:hover{
-    border: 2px solid white;
-}
-.Select-Teal:hover{
-    border: 2px solid white;
-}
-.Select-Light-Grey:hover{
-    border: 2px solid white;
-}
-.Select-Peach:hover{
-    border: 2px solid white;
-}
-.Select-Dark-Grey:hover{
-    border: 2px solid white;
-}
-.Select-Burgundy:hover{
-    border: 2px solid white;
-}
-.Select-Lime:hover{
-    border: 2px solid white;
-}
+
 .Colour-Selector{
     background: linear-gradient(
         90deg,
@@ -159,27 +141,24 @@ body{
     align-items: center;
     overflow: auto;
 }
-.Colour-Selector:hover{
-    border: 2px solid white;
-}
-.Colour-Row-Four{
-    height: 21%;
-}
+
 .Colour-Selector, .Select-Lime, .Select-Dark-Grey, .Select-Burgundy{
-    height: 80%;
+    height: 85%;
 }
 .Colour-Picker {
     border-radius: 50%;
     background: #fff;
     opacity: 0;
+    
   }
 .Grid-Container{
     display: flex;
     flex-direction: column;
     border: 5px solid black;
-    height: 65vmin;
-    width: 65vmin;
-    margin: 1%;
+    border-radius: 2%;
+    height: 62vmin;
+    width: 62vmin;
+    margin-bottom: 0.7%;
 }
 .Grid-Element-Base-State{
     background-color: white;
@@ -187,33 +166,52 @@ body{
 .Grid-Element-Base-State:hover{
     background-color: rgb(119, 113, 114);
 }
-.Options-Container{
-    height: 15%;
-}
 .Resize-Grid-Container{
-    flex-direction: column;
+    display: flex;
+}
+.Slider-Container{
+    display: flex;
+    padding-top: 20%;
+    align-items: bottom;
+    justify-content: center;
+    flex: 1;
+    height: 100%;
+    width: 55%;
 }
 .Resize-Grid-Slider{
     opacity: 0.9;
-    flex: 1 1 auto;
+    height: 75%;
+    width: 96%;
 }
 .Resize-Grid-Slider:hover{
     opacity: 1;
 }
 .Current-Dimensions{
-    flex: 1 1 auto;
+    flex: 1;
+    width: 5%;
+    display: flex;
+    text-align: center;
+    padding-bottom: 5%;
+    align-items: top;
+    color: #BBE1FA;
+    
 }
 .Options-Btn{
     border-radius: 20px;
     opacity: 0.9;
-    height: 30%;
+    height: 35%;
     width: 85%;
     padding: 2%;
     font-size: 90%;
+    background-color: #3282B8;
+    border: 5px solid #BBE1FA;
+    color: #BBE1FA;
 }
-
+.Clear-Grid-Btn:hover{
+    background-color: #275f85;
+}
 .Options-Btn:hover{
-   opacity: 1.2; 
+   opacity: 1.2;
 }
 .Eraser-Mode-Btn{   
     
