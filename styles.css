@@ -194,8 +194,18 @@ body{
     padding-bottom: 5%;
     align-items: top;
     color: #BBE1FA;
-    
 }
+input[type="range"]::-webkit-slider-runnable-track{
+    background-color: #3282B8;
+    border-radius: 25%;
+    border: 2px solid #BBE1FA;
+}
+input[type="range"]::-moz-range-track{
+    background-color: #3282B8;
+    border-radius: 25%;
+    border: 2px solid #BBE1FA;
+}
+
 .Options-Btn{
     border-radius: 20px;
     opacity: 0.9;
