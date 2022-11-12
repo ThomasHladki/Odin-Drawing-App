@@ -1,6 +1,7 @@
 body{
     width: 100%;
     margin: 0%;
+    background-color: #1B262C;
 }
 
 *{
@@ -195,16 +196,6 @@ body{
     align-items: top;
     color: #BBE1FA;
 }
-input[type="range"]::-webkit-slider-runnable-track{
-    background-color: #3282B8;
-    border-radius: 25%;
-    border: 2px solid #BBE1FA;
-}
-input[type="range"]::-moz-range-track{
-    background-color: #3282B8;
-    border-radius: 25%;
-    border: 2px solid #BBE1FA;
-}
 
 .Options-Btn{
     border-radius: 20px;
@@ -222,9 +213,6 @@ input[type="range"]::-moz-range-track{
 }
 .Options-Btn:hover{
    opacity: 1.2;
-}
-.Eraser-Mode-Btn{   
-    
 }
 .Active-Mode-Btn{
     background-color: rgba(255, 2, 2, 0.514);
